@@ -48,7 +48,13 @@ class Style {
   static const Color redBackground = Color(0xFFEDFBF7);
   static const Color yellowBackground = Color(0xFFFFFCEB);
   static const Color orangeBackground = Color(0xFFFFF8EE);
-  static const Color purpleBackground = Color(0xFFF9F8FF);
+  static const Color purpleBackground = Color(0xFFF9F8FF); 
+ 
+  //Dart
+  static const Color Dark1 = Color(0xFF181A20);
+  static const Color Dark2 = Color(0xff1F222A);
+  static const Color Dark3 = Color(0xff262A35);
+  static const Color Dark4 = Color(0xFF35383F);
 
   //Text style
   static const String fontMedium = "Urbanist-Medium";
@@ -101,6 +107,148 @@ class Style {
     fontSize: 48.sp,
   );
 
+  //Heading2
+  TextStyle h2Bold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 40.sp,
+  );
+
+  TextStyle h2SemiBold = TextStyle(
+    color: greyscale900,
+    fontWeight: FontWeight.w600,
+    fontFamily: fontSemiBold,
+    fontSize: 40.sp,
+  );
+
+  TextStyle h2Medium = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 40.sp,
+  );
+
+  TextStyle h2Regular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 40.sp,
+  );
+  //Heading3
+  TextStyle h3Bold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 32.sp,
+  );
+
+  TextStyle h3SemiBold = TextStyle(
+    color: greyscale900,
+    fontWeight: FontWeight.w600,
+    fontFamily: fontSemiBold,
+    fontSize: 32.sp,
+  );
+
+  TextStyle h3Medium = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 32.sp,
+  );
+
+  TextStyle h3Regular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 32.sp,
+  );
+
+//Heading4
+  TextStyle h4Bold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 24.sp,
+  );
+
+  TextStyle h4SemiBold = TextStyle(
+    color: greyscale900,
+    fontWeight: FontWeight.w600,
+    fontFamily: fontSemiBold,
+    fontSize: 24.sp,
+  );
+
+  TextStyle h4Medium = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 24.sp,
+  );
+
+  TextStyle h4Regular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 24.sp,
+  );
+  //Heading5
+  TextStyle h5Bold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 20.sp,
+  );
+
+  TextStyle h5SemiBold = TextStyle(
+    color: greyscale900,
+    fontWeight: FontWeight.w600,
+    fontFamily: fontSemiBold,
+    fontSize: 20.sp,
+  );
+
+  TextStyle h5Medium = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 20.sp,
+  );
+
+  TextStyle h5Regular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 20.sp,
+  );
+  //Heading5
+  TextStyle h6Bold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 18.sp,
+  );
+
+  TextStyle h6SemiBold = TextStyle(
+    color: greyscale900,
+    fontWeight: FontWeight.w600,
+    fontFamily: fontSemiBold,
+    fontSize: 18.sp,
+  );
+
+  TextStyle h6Medium = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 18.sp,
+  );
+
+  TextStyle h6Regular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 18.sp,
+  );
+
   //Body
   TextStyle bodySmallBold = TextStyle(
     color: greyscale900,
@@ -149,5 +297,89 @@ class Style {
     color: greyscale900,
     fontFamily: fontRegular,
     fontSize: 10.sp,
+  );
+  //BodyMedium
+  TextStyle bodyMediumBold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 14.sp,
+  );
+
+  TextStyle bodyMediumSemiBold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontSemiBold,
+    fontWeight: FontWeight.w600,
+    fontSize: 14.sp,
+  );
+
+  TextStyle bodyMedium = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 10.sp,
+  );
+
+  TextStyle bodyMediumRegular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 10.sp,
+  );
+  //BodyLarge
+  TextStyle bodyLargeBold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 16.sp,
+  );
+
+  TextStyle bodyLargeSemiBold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontSemiBold,
+    fontWeight: FontWeight.w600,
+    fontSize: 16.sp,
+  );
+
+  TextStyle bodyLarge = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 16.sp,
+  );
+
+  TextStyle bodyLargeRegular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 16.sp,
+  );
+  //BodyXLarge
+  TextStyle bodyXLargeBold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontBold,
+    fontWeight: FontWeight.w700,
+    fontSize: 18.sp,
+  );
+
+  TextStyle bodyXLargeSemiBold = TextStyle(
+    color: greyscale900,
+    fontFamily: fontSemiBold,
+    fontWeight: FontWeight.w600,
+    fontSize: 18.sp,
+  );
+
+  TextStyle bodyXLarge = TextStyle(
+    color: greyscale900,
+    fontFamily: fontMedium,
+    fontWeight: FontWeight.w500,
+    fontSize: 18.sp,
+  );
+
+  TextStyle bodyXLargeRegular = TextStyle(
+    color: greyscale900,
+    fontFamily: fontRegular,
+    fontWeight: FontWeight.w400,
+    fontSize: 18.sp,
   );
 }
