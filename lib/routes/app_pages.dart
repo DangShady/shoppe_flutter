@@ -1,5 +1,6 @@
 import 'package:ai_chat_flutter/page/create_password/create_password.dart';
 import 'package:ai_chat_flutter/page/home/home.dart';
+import 'package:ai_chat_flutter/page/introduction/introduction.dart';
 import 'package:ai_chat_flutter/page/login/login.dart';
 import 'package:ai_chat_flutter/page/register/register.dart';
 import 'package:ai_chat_flutter/page/verification/verification.dart';
@@ -11,7 +12,7 @@ import 'package:get/get.dart';
 part 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = AppRoutes.home;
+  static const INITIAL = AppRoutes.login;
 
   static final routes = [
     GetPage(
@@ -53,6 +54,11 @@ class AppPages {
       name: AppRoutes.welcom_screen,
       page: () => const WelcomePage(),
       binding: WelcomeBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.introduction,
+      page: () => const IntroductionPage(),
+      binding: IntroductionBinding(),
     ),
   ];
 }
