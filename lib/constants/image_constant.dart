@@ -12,4 +12,8 @@ class ImageConstant {
   static String icLogSuccess = 'assets/3.0x/icon_login_success.png';
   static String icCreatPw = 'assets/3.0x/icon_createpassword.png';
   static String icProfile = 'assets/3.0x/icon_profile.png';
+  static String icChatgpt = 'assets/3.0x/icon_chatgpt.png';
+  static String icGoogle = 'assets/3.0x/icon_google.png';
+  static String icFacebook = 'assets/3.0x/icon_facebook.png';
+  static String icApple = 'assets/3.0x/icon_apple.png';
 }
