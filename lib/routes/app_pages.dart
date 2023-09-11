@@ -1,6 +1,7 @@
 import 'package:ai_chat_flutter/page/create_password/create_password.dart';
 import 'package:ai_chat_flutter/page/home/home.dart';
 import 'package:ai_chat_flutter/page/login/login.dart';
+import 'package:ai_chat_flutter/page/register/register.dart';
 import 'package:ai_chat_flutter/page/verification/verification.dart';
 import 'package:ai_chat_flutter/page/resetpassword/resetpassword.dart';
 import 'package:ai_chat_flutter/page/profile/profile.dart';
@@ -40,6 +41,11 @@ class AppPages {
       name: AppRoutes.profile,
       page: () => ProfilePage(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.register,
+      page: () => const RegisterPage(),
+      binding: RegisterBinding(),
     ),
   ];
 }
