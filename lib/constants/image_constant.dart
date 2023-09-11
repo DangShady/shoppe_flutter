@@ -9,4 +9,5 @@ class ImageConstant {
    static String icFacebook = 'assets/3.0x/icon_facebook.png';
    static String icApple = 'assets/3.0x/icon_apple.png';
    static String icCboxTrue = 'assets/3.0x/icon_checkbox_true.png';
+   static String icLogSuccess = 'assets/3.0x/icon_login_success.png';
 }

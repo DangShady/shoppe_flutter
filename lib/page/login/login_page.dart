@@ -2,8 +2,10 @@ import 'package:ai_chat_flutter/constants/app_constant.dart';
 import 'package:ai_chat_flutter/constants/image_constant.dart';
 import 'package:ai_chat_flutter/helpers/extension/responsive.dart';
 import 'package:ai_chat_flutter/page/login/login.dart';
+import 'package:ai_chat_flutter/routes/app_pages.dart';
 import 'package:ai_chat_flutter/style/app_style.dart';
 import 'package:ai_chat_flutter/widget/button_with_icon.dart';
+import 'package:ai_chat_flutter/widget/custom_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/screen_util.dart';
@@ -146,6 +148,21 @@ class LoginPage extends GetView<LoginController> {
               backgroundColor: Style.disButton,
               radius: 100,
               innerPadding: EdgeInsets.symmetric(vertical: 24),
+              onTap: () {
+                  customDialog(context,
+                      isLoading: controller.isLoading.value,
+                      icon: Image.asset(ImageConstant.icLogSuccess),
+                      textConfirmColor: Colors.red,
+                      text: "Sig Up Successful!");
+                  Future.delayed(Duration(seconds: 1), () {
+                    controller.isLoading.value = false;
+                    if (controller.isLoading.value == false) {
+                      Get.back();
+                      Get.toNamed(AppRoutes.home);
+                    }
+                    // Đóng hộp thoại.
+                  });
+                },
             )
           ],
         ),
