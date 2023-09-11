@@ -77,7 +77,7 @@ flutter:
     - assets/fonts/
     - assets/lotties/
     - assets/animations/
-
+    - assets/3.0x/
   fonts:
     - family: Urbanist-Bold
       fonts:

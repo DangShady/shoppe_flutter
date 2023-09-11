@@ -19,6 +19,7 @@ class PaddingText extends StatelessWidget {
   final bool? isMarquee;
   final double? letterSpacing;
   final double? wordSpacing;
+  final FontWeight? fontWeight;
 
   const PaddingText(
       {super.key,
@@ -35,8 +36,10 @@ class PaddingText extends StatelessWidget {
       this.overflow = TextOverflow.clip,
       this.letterSpacing,
       this.wordSpacing,
-      this.padding = const EdgeInsets.all(0)});
-
+      this.padding = const EdgeInsets.all(0), this.fontWeight}
+      
+      );
+      
   @override
   Widget build(BuildContext context) {
     return isMarquee!
@@ -57,6 +60,7 @@ class PaddingText extends StatelessWidget {
         style: TextStyle(
           fontFamily: fontFamily,
           fontSize: fontSize ?? 14.sp,
+          fontWeight: fontWeight??FontWeight.w700,
           color: color,
           height: height,
           letterSpacing: letterSpacing ?? 1.sp,

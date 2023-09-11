@@ -7,6 +7,7 @@ import '_padding_text.dart';
 class RadiusButton extends StatelessWidget {
   final String? text;
   final double? fontSize;
+  final double? fontWeight;
   final String? fontFamily;
   final Color? textColor;
   final Color? backgroundColor;
@@ -39,6 +40,7 @@ class RadiusButton extends StatelessWidget {
   const RadiusButton({
     this.text,
     this.fontSize,
+    this.fontWeight,
     this.fontFamily = Style.fontMedium,
     this.textColor = Colors.black,
     this.backgroundColor = Style.primaryColor,
@@ -123,6 +125,7 @@ class RadiusButton extends StatelessWidget {
                                   maxLines: maxLines,
                                   overflow: overflow,
                                   text: text,
+                                 fontWeight: FontWeight.w700,
                                   fontFamily: fontFamily,
                                   fontSize: fontSize ?? 16.sp,
                                   color: textColor,
