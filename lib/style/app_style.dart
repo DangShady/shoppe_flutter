@@ -6,6 +6,7 @@ class Style {
 
   //Main
   static const Color primaryColor = Color(0xff17CE92);
+  static const Color primary50 = Color(0xffE8FAF4);
   static const Color secondaryColor = Color(0xff335081);
   static const Color success = Color(0xff12D18E);
   static const Color infoColor = Color(0xff17CE92);
