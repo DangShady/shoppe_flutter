@@ -6,5 +6,6 @@ abstract class AppRoutes {
   static const register = '/register';
   static const login = '/LOGIN';
   static const home = '/home';
+  static const resetpassword = '/resetpassword';
   static const create_password = '/create_password';
 }
