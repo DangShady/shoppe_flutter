@@ -66,6 +66,7 @@ class LoginPage extends GetView<LoginController> {
       Row(
         children: [
           GestureDetector(
+            
             onTap: () {
               controller.checkBoxed.value =! controller.checkBoxed.value;
             },
