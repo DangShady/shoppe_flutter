@@ -1,3 +1,4 @@
+import 'package:ai_chat_flutter/page/account/account_page.dart';
 import 'package:ai_chat_flutter/page/profile/profile.dart';
 import 'package:ai_chat_flutter/style/app_style.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +19,7 @@ class HomePageController extends GetxController {
     Center(
       child: Text("History", style: Style().h1Bold),
     ),
-    ProfilePage()
+    AccountPage()
   ];
 
   void switchTab(index) {

@@ -13,4 +13,5 @@ class ImageConstant {
   static String icCreatPw = 'assets/3.0x/icon_createpassword.png';
   static String icProfile = 'assets/3.0x/icon_profile.png';
   static String icChatgpt = 'assets/3.0x/icon_chatgpt.png';
+  static String xxxxx = 'assets/Union.png';
 }

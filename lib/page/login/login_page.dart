@@ -151,42 +151,15 @@ class LoginPage extends GetView<LoginController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              width: 1.0, color: Colors.grey.withOpacity(0.2)),
-                          borderRadius: BorderRadius.circular(100)),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 46.w, vertical: 18.h),
-                      child: Image.asset(
-                        ImageConstant.icGoogle,
-                        width: 24.w,
-                        height: 24.w,
-                      )),
-                  Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              width: 1.0, color: Colors.grey.withOpacity(0.2)),
-                          borderRadius: BorderRadius.circular(100)),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 46.w, vertical: 18.h),
-                      child: Image.asset(
-                        ImageConstant.icApple,
-                        width: 24.w,
-                        height: 24.w,
-                      )),
-                  Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              width: 1.0, color: Colors.grey.withOpacity(0.2)),
-                          borderRadius: BorderRadius.circular(100)),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 46.w, vertical: 18.h),
-                      child: Image.asset(
-                        ImageConstant.icFacebook,
-                        width: 24.w,
-                        height: 24.w,
-                      )),
+                  itemSocial(icon: ImageConstant.icGoogle),
+                  SizedBox(
+                    width: 16.w,
+                  ),
+                  itemSocial(icon: ImageConstant.icApple),
+                  SizedBox(
+                    width: 16.w,
+                  ),
+                  itemSocial(icon: ImageConstant.icFacebook),
                 ],
               ),
               SizedBox(
@@ -220,6 +193,25 @@ class LoginPage extends GetView<LoginController> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget itemSocial({required String icon, GestureTapCallback? onTap}) {
+    return Expanded(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+            decoration: BoxDecoration(
+                border:
+                    Border.all(width: 1.0, color: Colors.grey.withOpacity(0.2)),
+                borderRadius: BorderRadius.circular(100)),
+            padding: EdgeInsets.symmetric(horizontal: 46.w, vertical: 18.h),
+            child: Image.asset(
+              icon,
+              width: 24.w,
+              height: 24.w,
+            )),
       ),
     );
   }
