@@ -3,6 +3,7 @@ import 'package:ai_chat_flutter/page/home/home.dart';
 import 'package:ai_chat_flutter/page/login/login.dart';
 import 'package:ai_chat_flutter/page/verification/verification.dart';
 import 'package:ai_chat_flutter/page/resetpassword/resetpassword.dart';
+import 'package:ai_chat_flutter/page/profile/profile.dart';
 import 'package:get/get.dart';
 part 'app_routes.dart';
 
@@ -34,6 +35,11 @@ class AppPages {
       name: AppRoutes.resetpassword,
       page: () => const ResetpasswordPage(),
       binding: ResetpasswordBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.profile,
+      page: () => ProfilePage(),
+      binding: ProfileBinding(),
     ),
   ];
 }
