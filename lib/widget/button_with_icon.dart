@@ -125,7 +125,7 @@ class RadiusButton extends StatelessWidget {
                                   maxLines: maxLines,
                                   overflow: overflow,
                                   text: text,
-                                 fontWeight: FontWeight.w700,
+                                  fontWeight: FontWeight.w700,
                                   fontFamily: fontFamily,
                                   fontSize: fontSize ?? 16.sp,
                                   color: textColor,

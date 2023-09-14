@@ -49,8 +49,8 @@ class Style {
   static const Color redBackground = Color(0xFFEDFBF7);
   static const Color yellowBackground = Color(0xFFFFFCEB);
   static const Color orangeBackground = Color(0xFFFFF8EE);
-  static const Color purpleBackground = Color(0xFFF9F8FF); 
- 
+  static const Color purpleBackground = Color(0xFFF9F8FF);
+
   //Dart
   static const Color Dark1 = Color(0xFF181A20);
   static const Color Dark2 = Color(0xff1F222A);

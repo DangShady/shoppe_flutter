@@ -10,4 +10,5 @@ abstract class AppRoutes {
   static const create_password = '/create_password';
   static const verification = '/verification';
   static const profile = '/profile';
+  static const welcom_screen = '/welcom_screen';
 }
