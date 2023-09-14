@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class IntroductionController extends GetxController {
-  final indexPage=0.obs;
+  final indexPage = 0.obs;
   final PageController pageController = PageController();
   final List<String> pages = [
-    ImageConstant.logoChat,
-    ImageConstant.logoAiAsstant,
-    ImageConstant.logoAccount,
+    ImageConstant.icApple,
+    ImageConstant.icBell,
+    ImageConstant.icApple,
   ];
 
   final List<String> title = [
     "The best AI Chatbot app in this century",
     "Various AI Assistants to help you more",
     "Try premium for your unlimited usage",
-
   ];
 }
