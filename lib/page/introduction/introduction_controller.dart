@@ -6,10 +6,10 @@ class IntroductionController extends GetxController {
   final indexPage = 0.obs;
   final PageController pageController = PageController();
   final List<String> pages = [
-    ImageConstant.icApple,
-    ImageConstant.icBell,
-    ImageConstant.icApple,
-  ];
+    ImageConstant.icChatAi,
+    ImageConstant.icAiAssitants,
+    ImageConstant.icAccount,
+  ].obs;
 
   final List<String> title = [
     "The best AI Chatbot app in this century",

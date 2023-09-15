@@ -1,6 +1,7 @@
 import 'package:ai_chat_flutter/constants/app_constant.dart';
 import 'package:ai_chat_flutter/helpers/extension/responsive.dart';
 import 'package:ai_chat_flutter/page/verification/verification_controller.dart';
+import 'package:ai_chat_flutter/routes/app_pages.dart';
 import 'package:ai_chat_flutter/style/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -52,13 +53,13 @@ Obx(() => Row(
           controller.countdownSeconds.value = 5;
           controller.startCountdown();
           controller.showButtons.value = true;
-        };
+        }
         if(controller.countdownSeconds.value ==0){
           controller.showButtons.value = false;
         }
         
       },
-      child: Text(
+      child: Text( 
         controller.showButtons.value == false
             ? 'gửi lại mã '
             : '${controller.countdownSeconds.value} s',
@@ -107,6 +108,7 @@ Obx(() => Row(
             textStyle: Style().bodyLargeBold,
             enableActiveFill: true,
             onCompleted: (v) {
+              Get.toNamed(AppRoutes.create_password); 
             },
             beforeTextPaste: (text) => true,
             // onChanged: _viewModel.setColor,

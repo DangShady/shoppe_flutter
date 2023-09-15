@@ -27,9 +27,9 @@ class IntroductionPage extends GetView<IntroductionController> {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
-                  height: Get.height - 300,
-                  width: Get.width,
+                SizedBox(
+                  height: Get.height - 300.h,
+                  width: Get.width.w,
                   child: PageView.builder(
                     controller: controller.pageController,
                     itemCount: controller.pages.length,
@@ -37,14 +37,14 @@ class IntroductionPage extends GetView<IntroductionController> {
                       controller.indexPage.value = value;
                     },
                     itemBuilder: (BuildContext context, int index) {
-                      return Image.asset(controller.pages[index]);
+                      return Image.asset(controller.pages[index],width: Get.width.w,height:Get.height.h - 300.h ,);
                     },
                   ),
                 ),
                 Positioned(
-                  bottom: -10,
+                  bottom: -10.w,
                   left: 0,
-                  top: 300,
+                  top: 320.h,
                   right: 0,
                   child: Container(
                     decoration: BoxDecoration(
@@ -52,18 +52,22 @@ class IntroductionPage extends GetView<IntroductionController> {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: <Color>[
-                          Colors.white.withOpacity(0.01),
-                          Colors.white,
+                          Colors.white.withOpacity(0.0),
+                          Colors.white.withOpacity(0.5),
+                          Colors.white.withOpacity(0.8),
+                          Colors.white.withOpacity(0.9),
                           Colors.white.withOpacity(1),
+                          Colors.white.withOpacity(1),
+                          
                         ], // Gradient from https://le
                       ),
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: 0,
-                  right: 16,
-                  left: 16,
+                  bottom: 0.h,
+                  right: 16.w,
+                  left: 16.w,
                   child: Text(
                     controller.title[controller.indexPage.value],
                     maxLines: 2,
@@ -89,7 +93,8 @@ class IntroductionPage extends GetView<IntroductionController> {
               controller: controller.pageController, // Sử dụng controller từ controller của bạn
               count: controller.pages.length, // Tổng số trang
               effect: ExpandingDotsEffect(
-              activeDotColor: Style.primaryColor
+              activeDotColor: Style.primaryColor,
+              dotHeight: 8.h
               ), // Chọn hiệu ứng chỉ số trượt
               
             ),
@@ -98,12 +103,11 @@ class IntroductionPage extends GetView<IntroductionController> {
             Row(
               
               children: [
-          Expanded(
+                    Expanded(
             child: RadiusButton(
               
                 isFullWidth: true,
-                innerPadding: EdgeInsets.symmetric(vertical: 30.h),
-              
+                outsidePadding:  EdgeInsets.only(top: 0, bottom: 0, left: 16.w, right: 8.w),
                 text: 'Skip'.tr,
                 fontSize: 18.sp,
                 backgroundColor: Color(0xffE8FAF4),
@@ -117,13 +121,13 @@ class IntroductionPage extends GetView<IntroductionController> {
                       );
                 },
               ),
-          ),
+                    ),
                 
-          Expanded(
+                    Expanded(
             child: RadiusButton(
                 isFullWidth: true,
               
-                outsidePadding: EdgeInsets.only(left: 18.w,top: 16,right: 18,bottom: 16),
+               outsidePadding:  EdgeInsets.only(top: 0, bottom: 0, left: 16.w, right: 8.w),
                 
                 text: 'Next'.tr,
                 fontSize: 18.sp,
@@ -131,9 +135,9 @@ class IntroductionPage extends GetView<IntroductionController> {
                 textColor: Color(0xffFFFFFF),
                radius: 100,
                 onTap: () {
-                  // if(controller.indexPage.value == 4) {
-                  //   Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()),);
-                  // }
+                  if(controller.indexPage.value == 2) {
+                   Get.toNamed(AppRoutes.welcom_screen);
+                  }
                controller.pageController.animateToPage(
                         controller.indexPage.value + 1, // Chuyển đến trang kế tiếp
                         duration: Duration(milliseconds: 300),
@@ -141,8 +145,8 @@ class IntroductionPage extends GetView<IntroductionController> {
                       );
                 },
               ),
-          ),
-
+                    ),
+            
               ],
             ),
           ],

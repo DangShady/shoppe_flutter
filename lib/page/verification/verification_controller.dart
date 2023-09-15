@@ -17,7 +17,7 @@ class VerificationController extends GetxController {
 
   // Tạo hàm startCountdown để bắt đầu đếm ngược
   void startCountdown() {
-    const oneSec = const Duration(seconds: 1);
+    const oneSec = Duration(seconds: 1);
     Timer.periodic(
       oneSec,
       (Timer timer) {

@@ -19,7 +19,7 @@ class HomePageController extends GetxController {
     Center(
       child: Text("History", style: Style().h1Bold),
     ),
-    AccountPage()
+    const AccountPage()
   ];
 
   void switchTab(index) {

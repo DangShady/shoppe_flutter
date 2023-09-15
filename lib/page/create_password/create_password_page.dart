@@ -17,85 +17,91 @@ class CreatepasswordPage extends GetView<CreatepasswordController> {
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil(width: BASE_WIDTH, allowFontScaling: true)
       ..init(context);
-    return Obx(
-      ()=> Scaffold(
+    return  Scaffold(
         resizeToAvoidBottomInset: false,
     
-      body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 24.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-                    height: 60.h
-                  ),
-            GestureDetector(
-              onTap: () {
-                Get.back();
-              },
-              child: Icon(Icons.arrow_back),
-            ),
-            SizedBox(height: 24.h,),
-            Text('Create New Password 🔒', style: Style().h3Bold,),
-            SizedBox(height: 16.h,),
-            Text('Create your new password. If you forget it, then you have to do forgot password.',style: Style().bodyXLargeRegular,),
-            SizedBox(height: 32.h,),
-            Text('New Password', style: Style().bodyLargeBold),
-            SizedBox(height: 16.h,),
-            TextFormField(
-              obscureText: true,
-              style: Style().h5Bold,
-              decoration: InputDecoration(
-                hintText: 'New Password',
-               suffixIcon: Image.asset(ImageConstant.icNoEye),
-               hintStyle: Style().h5Bold.copyWith(color: Color(0xff9E9E9E)),
-              ),
-            ),
-            SizedBox(height: 24.h,),
-            Text('Confirm New Password', style: Style().bodyLargeBold,),
-            SizedBox(height: 16.h,),
-            TextFormField(
-              style: Style().h5Bold,
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: 'Confirm New Password',
-                hintStyle: Style().h5Bold.copyWith(color: Color(0XFF9E9E9E)),
-                suffixIcon: Image.asset(ImageConstant.icNoEye)
-              ),
-            ),
-      SizedBox(height: 328.h,),
-Divider(),
-SizedBox(height: 24.h,),
-      RadiusButton(
-        
-              text: 'Continue'.tr,
-              fontSize: 18,
-              isFullWidth: true,
-              maxWidth: double.maxFinite,
-              textColor: Colors.white,
-              backgroundColor: Style.primaryColor,
-              radius: 100,
-              innerPadding: EdgeInsets.symmetric(vertical: 24),
-              onTap: () {
-                  customDialog(context,
-                      isLoading: controller.isLoading.value,
-                      icon: Image.asset(ImageConstant.icCreatPw),
-                      textConfirmColor: Colors.red,
-                      text: "Reset Password Successful!");
-                  Future.delayed(Duration(seconds: 1), () {
-                    controller.isLoading.value = false;
-                    if (controller.isLoading.value == false) {
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 24.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                          height: 60.h
+                        ),
+                  GestureDetector(
+                    onTap: () {
                       Get.back();
-                      Get.toNamed(AppRoutes.home);
-                    }
-                    // Đóng hộp thoại.
-                  });
-                },
-            )
-          ],
-        ),
+                    },
+                    child: Icon(Icons.arrow_back),
+                  ),
+                  SizedBox(height: 24.h,),
+                  Text('Create New Password 🔒', style: Style().h3Bold,),
+                  SizedBox(height: 16.h,),
+                  Text('Create your new password. If you forget it, then you have to do forgot password.',style: Style().bodyXLargeRegular,),
+                  SizedBox(height: 32.h,),
+                  Text('New Password', style: Style().bodyLargeBold),
+                  SizedBox(height: 16.h,),
+                  TextFormField(
+                    obscureText: true,
+                    style: Style().h5Bold,
+                    decoration: InputDecoration(
+                      hintText: 'New Password',
+                     suffixIcon: Image.asset(ImageConstant.icNoEye),
+                     hintStyle: Style().h5Bold.copyWith(color: Color(0xff9E9E9E)),
+                    ),
+                  ),
+                  SizedBox(height: 24.h,),
+                  Text('Confirm New Password', style: Style().bodyLargeBold,),
+                  SizedBox(height: 16.h,),
+                  TextFormField(
+                    style: Style().h5Bold,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: 'Confirm New Password',
+                      hintStyle: Style().h5Bold.copyWith(color: Color(0XFF9E9E9E)),
+                      suffixIcon: Image.asset(ImageConstant.icNoEye)
+                    ),
+                  ),
+          
+                ],
+              ),
+            ),
+          ),
+          
+          RadiusButton(
+            
+                  text: 'Continue'.tr,
+                  fontSize: 18,
+                  isFullWidth: true,
+                  maxWidth: double.maxFinite,
+                  textColor: Colors.white,
+                  backgroundColor: Style.primaryColor,
+                  radius: 100,
+                  innerPadding: EdgeInsets.symmetric(vertical: 24),
+                  onTap: () {
+                      customDialog(context,
+                          isLoading: controller.isLoading.value,
+                          icon: Image.asset(ImageConstant.icCreatPw),
+                          textConfirmColor: Colors.red,
+                          text: "Reset Password Successful!");
+                      Future.delayed(Duration(seconds: 1), () {
+                        controller.isLoading.value = false;
+                        if (controller.isLoading.value == false) {
+                          Get.back();
+                          Get.toNamed(AppRoutes.home);
+                        }
+                        // Đóng hộp thoại.
+                      });
+                    },
+                ),
+                SizedBox(height: 36.h,),
+
+        ],
       ),
-      ),
-    );
+      );
+
   }
 }

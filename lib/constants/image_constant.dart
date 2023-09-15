@@ -13,5 +13,20 @@ class ImageConstant {
   static String icCreatPw = 'assets/3.0x/icon_createpassword.png';
   static String icProfile = 'assets/3.0x/icon_profile.png';
   static String icChatgpt = 'assets/3.0x/icon_chatgpt.png';
-  static String xxxxx = 'assets/Union.png';
+  static String icChatAi = 'assets/ChatAi.png';
+  static String icAiAssitants = 'assets/AiAssistants.png';
+  static String icAccount = 'assets/Account.png';
+  static String logoChatGPT = 'assets/logo_chat_gpt.png';
+  static String logoUpdatePro = 'assets/upgrade_to_pro.png';
+  static String ellpSe = 'assets/Ellipse.png';
+  static String nextWhile = 'assets/next_while.png';
+  static String show = 'assets/Show.png';
+  static String security = 'assets/Shield Done.png';
+  static String profile = 'assets/Profile.png';
+  static String paper = 'assets/Paper.png';
+  static String logOut = 'assets/Logout.png';
+  static String lock = 'assets/Lock.png';
+  static String infoSquare = 'assets/Info Square.png';
+  static String document = 'assets/Document.png';
+  static String next = 'assets/next.png';
 }
