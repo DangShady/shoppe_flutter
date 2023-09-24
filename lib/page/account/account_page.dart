@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:ai_chat_flutter/constants/image_constant.dart';
 import 'package:ai_chat_flutter/helpers/extension/responsive.dart';
 import 'package:ai_chat_flutter/page/account/account_controller.dart';
+import 'package:ai_chat_flutter/routes/app_pages.dart';
 import 'package:ai_chat_flutter/style/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -146,12 +147,32 @@ class AccountPage extends GetView<AccountController> {
                   SizedBox(
                     height: 24.h,
                   ),
-                  ...controller.listGeneral.map((e) => Padding(
-                        padding: EdgeInsets.only(bottom: 24.h),
-                        child: item(
-                            icon: e['icon'],
-                            title: e["title"],
-                            subTitle: e['subTitle']),
+                  ...controller.listGeneral.map((e) => GestureDetector(
+                        child: Padding(
+                          padding: EdgeInsets.only(bottom: 24.h),
+                          child: item(
+                              icon: e['icon'],
+                              title: e["title"],
+                              subTitle: e['subTitle']),
+                        ),
+                        onTap: () {
+                          switch (controller.listGeneral.length) {
+                            case 1:
+                              Get.toNamed(AppRoutes.login);
+                              // code block
+                              break;
+                            case 2:
+                              Get.toNamed(AppRoutes.login);
+                              // code block
+                              break;
+                            case 3:
+                              Get.toNamed(AppRoutes.login);
+                              // code block
+                              break;
+                            default:
+                            // code block
+                          }
+                        },
                       )),
                   Row(
                     children: [
