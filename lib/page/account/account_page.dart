@@ -196,10 +196,29 @@ class AccountPage extends GetView<AccountController> {
                     controller.listAbout.length,
                     (index) => Padding(
                       padding: EdgeInsets.only(bottom: 24.h),
-                      child: item(
-                          icon: controller.listAbout[index]["icon"],
-                          title: controller.listAbout[index]["title"],
-                          isShow: index == 3 ? true : false),
+                      child: GestureDetector(
+                        child: item(
+                            icon: controller.listAbout[index]["icon"],
+                            title: controller.listAbout[index]["title"],
+                            isShow: index == 3 ? true : false),
+                        onTap: () {
+                          switch (controller.listAbout.length) {
+                            case 1:
+                              Get.toNamed(AppRoutes.login);
+                              // code block
+                              break;
+                            case 2:
+                              Get.toNamed(AppRoutes.login);
+                              // code block
+                              break;
+                            case 4:
+                              Get.toNamed(AppRoutes.login);
+                              // code block
+                              break;
+                            default:
+                          }
+                        },
+                      ),
                     ),
                   ))
                 ],
