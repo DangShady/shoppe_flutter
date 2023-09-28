@@ -12,12 +12,12 @@ class AccountController extends GetxController {
       "subTitle": "",
     },
     {
-      "title": "Personal Info",
+      "title": "Security",
       "icon": ImageConstant.security,
       "subTitle": "",
     },
     {
-      "title": "Personal Info",
+      "title": "Language",
       "subTitle": "English (US)",
       "icon": ImageConstant.document,
     },
